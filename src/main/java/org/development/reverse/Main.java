@@ -11,5 +11,6 @@ public class Main {
         String inputText = input.getInputText();
         String reverse = process.reverse(inputText);
         output.getOutputText(reverse);
+
     }
 }

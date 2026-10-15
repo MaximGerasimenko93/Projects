@@ -25,6 +25,7 @@ public class Process implements TextReverser {
                 right--;
             }
         }
+
         return new String(charArray);
     }
 }

@@ -10,5 +10,6 @@ public class Input implements TextReader {
     public String getInputText() {
         System.out.println("Введите текст:");
         return sc.nextLine();
+
     }
 }
