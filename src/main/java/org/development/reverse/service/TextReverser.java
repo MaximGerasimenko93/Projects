@@ -1,7 +1,6 @@
-package org.development.reverse;
+package org.development.reverse.service;
 
 public interface TextReverser {
 
     String reverse(String text);
-
 }

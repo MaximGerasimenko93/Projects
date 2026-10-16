@@ -1,4 +1,6 @@
-package org.development.reverse;
+package org.development.reverse.implementation;
+
+import org.development.reverse.service.TextReader;
 
 import java.util.Scanner;
 
@@ -10,6 +12,5 @@ public class Input implements TextReader {
     public String getInputText() {
         System.out.println("Введите текст:");
         return sc.nextLine();
-
     }
 }

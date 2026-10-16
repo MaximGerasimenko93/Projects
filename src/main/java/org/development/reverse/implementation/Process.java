@@ -1,31 +1,31 @@
-package org.development.reverse;
+package org.development.reverse.implementation;
+
+import org.development.reverse.service.TextReverser;
 
 public class Process implements TextReverser {
 
     @Override
     public String reverse(String text) {
-        Input input = new Input();
-        char[] charArray = input.getInputText().toCharArray();
+        char[] charArray = text.toCharArray();
         int left = 0;
-        int right = 0;
+        int right = charArray.length - 1;
 
         while (left < right) {
-            char tmp = charArray[left];
-            charArray[left] = charArray[right];
-            charArray[right] = tmp;
             boolean leftIndex = Character.isLetter(charArray[left]);
             boolean rightIndex = Character.isLetter(charArray[right]);
-            if (leftIndex) {
-                continue;
-            } else if (!leftIndex) {
+            if (!leftIndex) {
                 left++;
-            } else if (rightIndex) {
-                continue;
             } else if (!rightIndex) {
+                right--;
+            } else {
+                char tmp = charArray[left];
+                charArray[left] = charArray[right];
+                charArray[right] = tmp;
+
+                left++;
                 right--;
             }
         }
-
         return new String(charArray);
     }
 }
