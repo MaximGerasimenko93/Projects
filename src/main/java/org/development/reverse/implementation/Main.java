@@ -1,8 +1,10 @@
 package org.development.reverse.implementation;
 
+import java.util.Scanner;
+
 public class Main {
     static void main(String[] args) {
-        Input input = new Input();
+        Input input = new Input(new Scanner(System.in));
         Process process = new Process();
         Output output = new Output();
         Checker checker = new Checker();
